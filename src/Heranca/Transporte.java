@@ -8,7 +8,7 @@ public class Transporte {
     private String cor;
     private int capacidade;
     private double custoManutencao;
-    private int anofabricacao;
+    private int anoFabricacao;
     private double preco;
     private boolean isLigado;
 
@@ -16,7 +16,7 @@ public class Transporte {
         this.nome = nome;
         this.marca = marca;
         this.modelo = modelo;
-        this.anofabricacao = anoFabricacao;
+        this.anoFabricacao = anoFabricacao;
         this.preco = preco;
         this.isLigado = isLigado;
     }
@@ -46,7 +46,39 @@ public class Transporte {
     }
 
     public int getAnoFabricacao() {
-        return ;
+        return anoFabricacao;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public boolean isLigado() {
+        return isLigado;
+    }
+
+    public void setCor(String cor){
+        this.cor = cor;
+    }
+
+    public void setCustoManutenao(double custoManutencao) {
+        this.custoManutencao = custoManutencao;
+    }
+
+    public void ligar() {
+        this.isLigado = true;
+        System.out.println("Desligando motores...");
+    }
+
+    public void acelerar() {
+    }
+
+    public void frear(){
+        System.out.println("Freando...");
+    }
+
+    public double caclcularSeguro() {
+        return preco*0.1;
     }
 
 }

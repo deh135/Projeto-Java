@@ -1,5 +1,6 @@
-package model.Revisao;
+package revisao;
 
+import model.Caneta;
 import model.Produto;
 
 public class Loja {
@@ -9,7 +10,7 @@ public class Loja {
 
         Produto produto2 = new Produto();
         produto2.setNome("Camisa do Brasil");
-        String nome = produto2.getNome();
+        String nome  = produto2.getNome();
         System.out.println(nome);
 
         produto1.setPreco(700.00);
@@ -20,10 +21,13 @@ public class Loja {
         System.out.println("Estoque do Produto1");
         produto1.mostrarEstoque();
 
+        System.out.println("-".repeat(50));
+
         produto1.adicionarAoEstoque(5);
 
-        System.out.println("Estoque do Produto1 atualizado");
+        System.out.println("Estoque do Produto1 Atualizado");
         produto1.mostrarEstoque();
+
 
 
     }

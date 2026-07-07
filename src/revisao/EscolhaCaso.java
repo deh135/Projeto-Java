@@ -1,26 +1,29 @@
-public class escolhaCaso {
+package revisao;
+
+import java.util.Scanner;
+
+public class EscolhaCaso {
     public static void main(String[] args) {
 
         Scanner leia = new Scanner(System.in);
-
-        System.out.println("escolhas uma das opcoes abaixo: ");
+        System.out.println("Escolha uma das opções abaixo:");
         System.out.println("""
-                [1] SOMAR
-                [2] SUBTRAIR
-                [3] MULTIPLICAR
-                [4] DIVIDIR
-                [5] POTÊNCIA 
-                [6] RAIZ QUADRADA
-                [7] RESTO DA DIVISÃO
-                [0] SAIR
-                \s""" );
-        System.out.print("Opcao: ");
+                 [1] SOMAR
+                 [2] SUBTRAIR
+                 [3] MULTIPLICAR
+                 [4] DIVIDIR
+                 [5] POTÊNCIA
+                 [6] RAIZ QUADRADA
+                 [7] RESTO DA DIVISÃO
+                 [0] SAIR
+               \s""");
+        System.out.print("Opção: ");
         int opcao = leia.nextInt();
-        System.out.println("digite o primeiro numero: ");
+        System.out.print("Digite o primeiro número: ");
         double numero1 = leia.nextDouble();
-        System.out.println("digite o segundo numero:" );
+        System.out.print("Digite o segundo número: ");
         double numero2 = leia.nextDouble();
-        double resultado ;
+        double resultado = 0 ;
 
         switch (opcao) {
             case 1:
@@ -36,10 +39,10 @@ public class escolhaCaso {
                 resultado = numero1 / numero2;
                 break;
             case 5:
-                resultado = match.pow(numero1) + match.sqrt(numero2);
+                resultado = Math.pow(numero1, numero2);
                 break;
             case 6:
-                resultado = match.sqrt(numero1) + match.sqrt(numero2);
+                resultado = Math.sqrt(numero1) + Math.sqrt(numero2);
                 break;
             case 7:
                 resultado = numero1 % numero2;
@@ -47,8 +50,9 @@ public class escolhaCaso {
             case 0:
                 break;
             default:
-                System.out.println("opcao invalida");
+                System.out.println("Opção Inválida");
         }
-        System.out.printf("o resultado e igual a %.2f", resultado);
+        System.out.printf("O resultado é igual a %.2f ", resultado);
+
     }
 }
